@@ -1,0 +1,57 @@
+registration uchun token generate qilish kerak. DONE
+
+
+QILINIISHI KERAK BO'LGAN TASHLAB KETILGAN QISIMLAR:
+    --  login & Register uchun validatsia yozish;
+    --  reset password qismini yozish;
+
+    --  tag va category create qilish;
+    --  tag bosilganda, aloqador postlar listini chiqarish - DONE
+
+    --  post creatorlari xaqida malumotlarni chiqarish - DONE
+
+    --  profile uchun IsAuthor permissionini yozish - DONE
+
+
+POST SPECIFICATIONS:
+    --  post lists by status draft      <IsSuperuser>   - DONE
+    --  post lists by category      <AllowAny>    - DONE
+    --  post detail      <AllowAny>    - DONE
+    --  post a comment      <IsSuperuser>    - DONE
+    --  post a comment count      <AllowAny>    - DONE
+
+    --  post create      <IsAdmin>     - DONE
+    --  post update      <IsAdmin>     - DONE
+    --  post delete      <IsAdmin>    - DONE
+
+    --  post comment create      <IsAuthenticated>    - DONE
+    --  post comment update      <IsAuthor>     - DONE
+    --  post comment delete      <IsAuthenticated>
+
+
+COMMENT SPECIFICATIONS:
+    --  comment lists      <IsSuperuser>     - DONE
+    --  comment a post      <IsAuthenticated>     - DONE
+    --  comment count in post      <IsAuthenticated>     - DONE
+
+
+PROFILE SPECIFICATIONS:
+    --  profile lists       <AllowAny>      - DONE
+    --  profile about       <AllowAny>      - DONE
+    --  profile edit        <IsAuthor>       - DONE
+    --  profile user post        <AllowAny>       - DONE
+
+
+auth - DONE
+post crud - DONE
+post searching/tag/category - DONE
+post sorting by user - DONE
+profile - edit by author - DONE
+
+
+whithout cache:
+    -- register - 975 ms
+    -- login - 960 ms
+    -- logout - 24 ms
+    -- get all post lists - 33 ms
+    -- get all user lists - 49 ms

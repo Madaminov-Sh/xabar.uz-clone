@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{request.user.username}} malumotlarini o'zgartirish{% endblock title %}
+
+
+{% block content %}
+<h2>malumotlarni tahrirlash</h2>
+
+<form method="post" enctype='multipart/form-data'>{% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <button type='submit'>saqlash</button>
+</form>
+
+{% endblock %}

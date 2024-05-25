@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{user.username}} profile{% endblock title %}
+
+{% block content %}
+<h2>sizning shaxsiy malumotlaringiz</h2>
+
+<img src="{{profile.image.url}}" alt=""><br>
+<label>ism</label> <input type="text"value="{{user.first_name}}" readonly placeholder="malumot yo'q"><br>
+<label>familia</label> <input type="text"value="{{user.last_name}}" readonly placeholder="malumot yo'q"><br>
+<label>email</label> <input type="text"value="{{user.email}}" readonly placeholder="malumot yo'q"><br>
+<label>username</label> <input type="text"value="{{user.username}}" readonly placeholder="malumot yo'q"><br>
+<label>date of brith</label> <input type="text"value="{{profile.date_of_brith}}" readonly placeholder="malumot yo'q">
+<h6><a href="{% url 'register:edit_dashbord'%}">etid</a></h6>
+{% endblock content %}
